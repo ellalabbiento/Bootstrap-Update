@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorority Merch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* General Styles */
+        body {
+            background-color: #ffe4f1; /* Light pink background */
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun, casual font */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #d5006d; /* Bright pink header background */
+            color: #ffffff; /* White text color */
+            padding: 20px; /* Padding for header */
+            text-align: center; /* Center the text */
+            border-bottom: 5px solid #ff69b4; /* Bright pink border */
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px; /* Padding for main content */
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center; /* Center footer text */
+            padding: 10px; /* Padding for footer */
+            background-color: #d5006d; /* Bright pink footer background */
+            color: #ffffff; /* Footer text color */
+        }
+
+        /* jQuery Page Specific Styles */
+        section {
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for the jQuery interactive sections */
+        section#hideSection {
+            background-color: #ffe4f1; /* Light pink background */
+        }
+
+        section#toggleSection {
+            background-color: #f1a1e8; /* Light pink with a shade of purple */
+        }
+
+        section#colorSection {
+            background-color: #ffb3c6; /* Lighter pink to match the theme */
+        }
+
+        /* Button Styling for jQuery interactions */
+        button {
+            background-color: #d5006d; /* Bright pink */
+            color: #ffffff; /* White text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff69b4; /* Bright pink hover color */
+        }
+
+        /* Paragraph Styling for Interactive Effects */
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 10px 0;
+            color: #4d4d4d;
+        }
+
+        /* Hover effects for interactive paragraphs */
+        p:hover {
+            color: #ff69b4; /* Hover color for paragraphs */
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("#p1").mouseenter(function(){
+                alert("Welcome to Sorority Merch! Check out our latest designs!");
+            });
+
+            $("p").click(function(){
+                $(this).hide();
+            });
+
+            $("button").click(function(){
+                $("p").toggle();
+            });
+
+            $("button").click(function(){
+                $("#p1").css("color", "pink").slideUp(2000).slideDown(2000);
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Sorority Merch!</h1>
+
+    <!-- Bootstrap Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: #d5006d; font-weight: bold;">Sorority Merch Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="learnmore.html">Learn More About the Merch</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutme.html">Learn More About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="materialize.html">Materialize Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jquery.html">JQuery</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="bootstrap.html">Bootstrap Page</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- jQuery Interactive Content -->
+
+    <section id="hideSection">
+        <p>If you click on me, I will disappear.</p>
+        <p>Click me away!</p>
+    </section>
+
+    <hr>
+
+    <section id="toggleSection">
+        <button>Toggle between hiding and showing the paragraphs</button>
+        <p>Explore our trendy t-shirt designs for sorority girls!</p>
+        <p>Our soft cotton fabric ensures maximum comfort for all-day wear.</p>
+    </section>
+
+    <hr>
+
+    <section id="colorSection">
+        <p id="p1">Exclusive Giveaway! Enter Now!</p>
+        <button>Click me to enter</button>
+    </section>
+
+    <!-- Sorority Merch Content Section -->
+    <section id="materialsSection">
+        <h2>Our Materials: Quality Meets Comfort</h2>
+        <p>At Sorority Merch, we prioritize comfort and style. We use only the best materials to create our apparel, ensuring that you can look chic and feel comfy all day long. Our t-shirts and sweatshirts are made from 100% soft cotton that’s breathable and perfect for any season.</p>
+        
+        <p>Our leggings are crafted with a unique blend of spandex and cotton for just the right amount of stretch and support. Whether you’re lounging around or going out for a workout, our leggings are made to move with you.</p>
+        
+        <p>We also offer a range of accessories, including cozy socks, stylish hats, and fun tote bags—perfect for representing your sorority in style. All of our products are made with eco-friendly materials, ensuring you can look good while doing good for the planet!</p>
+        
+        <p>Each item is designed with our customers in mind—whether you’re attending an event, heading to class, or just relaxing with friends, our sorority merch has something for everyone!</p>
+    </section>
+    <section id="merchSelection" style="background-color: #ffb3c6; padding: 20px; border-radius: 8px; margin-top: 20px;">
+        <h2>Select Your Favorite Merch</h2>
+        <select id="merchDropdown" style="padding: 10px; border-radius: 5px; border: 1px solid #d5006d;">
+            <option value="" disabled selected>Choose an item</option>
+            <option value="tshirt">T-Shirts - Stylish and comfy!</option>
+            <option value="hoodie">Hoodies - Perfect for chilly days.</option>
+            <option value="leggings">Leggings - Stretchy and supportive.</option>
+            <option value="accessories">Accessories - Add a fun touch to any outfit!</option>
+        </select>
+        <p id="merchDescription" style="margin-top: 15px; font-size: 18px; color: #4d4d4d;"></p>
+    </section>
+    
+    <script>
+        $(document).ready(function() {
+            // Event listener for dropdown change
+            $("#merchDropdown").change(function() {
+                let selectedItem = $(this).val();
+                let description = "";
+    
+                // Set description based on selection
+                if (selectedItem === "tshirt") {
+                    description = "Our T-Shirts are stylish, comfy, and perfect for casual wear!";
+                } else if (selectedItem === "hoodie") {
+                    description = "Cozy Hoodies are ideal for chilly days and represent sisterhood in style!";
+                } else if (selectedItem === "leggings") {
+                    description = "Our Leggings offer the perfect mix of stretch and support for every occasion.";
+                } else if (selectedItem === "accessories") {
+                    description = "Check out our fun Accessories to add a unique flair to your outfit!";
+                }
+    
+                // Display the description
+                $("#merchDescription").hide().html(description).fadeIn(1000);
+            });
+        });
+    </script>
+    
+</main>
+
